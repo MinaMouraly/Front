@@ -6,7 +6,7 @@ const port = 3000;//port sur lequel le serveur web est lancé
 
 function main(){
 
-    app.use(express.static("public"))
+    app.use(express.static('public'));
     app.get("/", (req,res) => {
 
         //HTTP permet de definir le mode de comunication entre le client et le serveur 
