@@ -1,20 +1,56 @@
 const express =require("express");
-const app = express();//initialiation 
-const port = 3000;
+//on recupere le module fs
+const fs= require ('fs');
+const app = express();//initialiation de l'application web 
+const port = 3000;//port sur lequel le serveur web est lancé
 
 function main(){
 
+    app.use(express.static("public"))
     app.get("/", (req,res) => {
-        //const dt= new Data();
-        res.send("Hello Toto je m'appele mina !");
-        //console.log(dt);
+
+        //HTTP permet de definir le mode de comunication entre le client et le serveur 
+        //req contient des info sur la requete HTTP 
+        //res est la reponde de la fonction renvoyer au client
+        res.set('Content-Type', 'text/html');//permet de fixer la valeur d'un champs de l'entete HTTP
+        res.send('<html><body><h1>Accueil</h1></body></html>');//permet de transmettre une reponse au client 
+       
+    
+    });
+
+    //page 1 contient la liste des clients
+    app.get("/liste.html", (req,res,next) => {
+
+        res.set('Content-Type', 'application/json');
+        res.send( __dirname + '.html');
+       
+    
+    });
+     
+    //page 2 contient  la creation de client 
+    app.get("/liste/creer", (req,res,next) => {
+
+        res.set('Content-Type', 'application/json');
+        res.send('on va creer ');
+        next();
+       
+    
+    });
+
+     //page 3 contient  la creation de client 
+     app.get("/liste/creer/modif", (req,res,next) => {
+
+        res.set('Content-Type', 'application/json');
+        res.send('hey modif');
+       
+    
     });
 
     app.listen(port,function() {
-        console.log('Serveur lancé sur port ${port}');
+        console.log('Serveur lancé sur http.//localhost: ${port}');
     });
-    
-    
+  
+    // creer de nouvelle page 
 }
 main();
 
