@@ -19,10 +19,10 @@ function main(){
     });
 
     //page 1 contient la liste des clients
-    app.get("/liste.html", (req,res,next) => {
+    app.get("/liste.html", (req,res) => {
 
         res.set('Content-Type', 'application/json');
-        res.send( __dirname + '.html');
+        //res.send( __dirname + '.html');
        
     
     });
@@ -31,7 +31,7 @@ function main(){
         console.log('Serveur lancé sur http.//localhost: ${port}');
     });
   
-    // creer de nouvelle page 
+    // on pourra creer une page 
 }
 main();
 

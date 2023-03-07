@@ -1,11 +1,12 @@
 table , caption , th , td {
 
-    border: épx solid skyblue;
+    border: 2px solid skyblue;
     border-collapse: collapse;
+    
 }
 
 caption, th , td{
 
     padding: 8px;
-    
+
 }
