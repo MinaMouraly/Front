@@ -1,6 +1,5 @@
 const express =require("express");
 //on recupere le module fs
-const fs= require ('fs');
 const app = express();//initialiation de l'application web 
 const port = 3000;//port sur lequel le serveur web est lancé
 
