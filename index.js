@@ -26,25 +26,6 @@ function main(){
        
     
     });
-     
-    //page 2 contient  la creation de client 
-    app.get("/liste/creer", (req,res,next) => {
-
-        res.set('Content-Type', 'application/json');
-        res.send('on va creer ');
-        next();
-       
-    
-    });
-
-     //page 3 contient  la creation de client 
-     app.get("/liste/creer/modif", (req,res,next) => {
-
-        res.set('Content-Type', 'application/json');
-        res.send('hey modif');
-       
-    
-    });
 
     app.listen(port,function() {
         console.log('Serveur lancé sur http.//localhost: ${port}');
