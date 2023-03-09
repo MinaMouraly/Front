@@ -10,7 +10,7 @@ caption, th , td{
 
 }
 
-button {
+.bc {
     display: inline-block;
     background-color: #bfbbc5;
     padding: 10px;

@@ -1,4 +1,5 @@
 const express =require("express");
+const bodyParser= require("body-parser");
 //on recupere le module fs
 const app = express();//initialiation de l'application web 
 const port = 3000;//port sur lequel le serveur web est lancé
@@ -6,6 +7,7 @@ const port = 3000;//port sur lequel le serveur web est lancé
 function main(){
 
     app.use(express.static('public'));
+    app.use(bodyParser.urlencoded({extended: true}));
     app.get("/", (req,res) => {
 
         //HTTP permet de definir le mode de comunication entre le client et le serveur 
@@ -25,13 +27,22 @@ function main(){
     });
 
      //page 2 contient  la creation  des clients
-     app.post("/liste.html", (req,res) => {
+     app.post("/form.html", (req,res) => {
+        let user_id= req.body.user_id;
+        let user_mail= req.body.user_mail;
+        let user_name= req.body.user_name;
+        let user_surname= req.body.user_surname;
+        let user_societe= req.body.user_societe;
+        let user_pays= req.body.user_pays;
 
-        res.set('Content-Type', 'text/html');
-        res.send('<html><body><h1>Bienvenue au formulaire </h1></body></html>')
-       
-    
+        console.log("id="+user_id);
+        console.log("Email="+user_mail);
+        console.log("Nom="+user_name);
+        console.log("Prenom="+user_surname);
+        console.log("societe="+user_societe);
+        console.log("pays="+user_pays);
     });
+    
 
     app.listen(port,function() {//lance le serveur web est a l'ecoute 
         console.log(`Serveur lancé sur http.//localhost: ${port}`);
