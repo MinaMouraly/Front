@@ -9,3 +9,14 @@ caption, th , td{
     padding: 8px;
 
 }
+
+button {
+    display: inline-block;
+    background-color: #bfbbc5;
+    padding: 10px;
+    width: 150px;
+    color: #ffffff;
+    text-align: center;
+    float: left;
+
+}
