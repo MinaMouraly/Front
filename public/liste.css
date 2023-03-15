@@ -1,22 +1,63 @@
-table , caption , th , td {
 
-    border: 2px solid skyblue;
+/* Ajouter une bordure autour du tableau */
+table {
     border-collapse: collapse;
-}
-
-caption, th , td{
-
-    padding: 8px;
-
-}
-
-.bc {
-    display: inline-block;
-    background-color: #bfbbc5;
+    border: 2px solid black;
+    width: 100%;
+  }
+  
+  /* Ajouter un style aux cellules de l'en-tête de tableau */
+  th {
+    background-color: #af7ab0;
+    color: white;
+    font-weight: bold;
     padding: 10px;
-    width: 150px;
-    color: #ffffff;
     text-align: center;
-    float: left;
+  }
+  
+  /* Ajouter un style de survol de la souris pour les cellules de l'en-tête de tableau */
+  th:hover {
+    background-color: #dfacec;
+  }
+  
+  /* Ajouter un style alterné de ligne pour les cellules de données */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Ajouter un style de survol de la souris pour les cellules de données */
+  tr:hover {
+    background-color: #e5e5e5;
+  }
+  
+  /* Ajouter une bordure à toutes les cellules de tableau */
+  td {
+    border: 1px solid rgb(241, 223, 223);
+    padding: 8px;
+    text-align: center;
+  }
+  
+  
+  .button1 {
+    background-color: #898181;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .button1:hover {
+    background-color: #bd8a8a;
+    color: #fff;
+  }
+  
+  .button1:active {
+    background-color: #ced6de;
+    color: #fff;
+    box-shadow: none;
+  }
 
-}

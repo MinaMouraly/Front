@@ -9,7 +9,18 @@ function main(){
     app.use(express.static('public'));
     app.use(bodyParser.urlencoded({extended: true}));
 
-   /* app.get("/", (req,res) => {
+
+    app.listen(port,function() {//lance le serveur web est a l'ecoute 
+        console.log(`Serveur lancé sur http.//localhost: ${port}`);
+    });
+  
+    // on pourra creer une page 
+}
+main();
+
+
+
+/* app.get("/", (req,res) => {
 
         //HTTP permet de definir le mode de comunication entre le client et le serveur 
         //req contient des info sur la requete HTTP 
@@ -45,13 +56,5 @@ function main(){
         console.log("pays="+user_pays);
     });*/
     
-
-    app.listen(port,function() {//lance le serveur web est a l'ecoute 
-        console.log(`Serveur lancé sur http.//localhost: ${port}`);
-    });
-  
-    // on pourra creer une page 
-}
-main();
 
 
