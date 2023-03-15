@@ -4,21 +4,35 @@
 
     <link rel="stylesheet" href="liste.css">
     
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://codepb.github.io/jquery-template/jquery.loadTemplate-0.4.3.js" type="text/javascript" charset="utf-8"></script>-->
-    </head>
+   
+   </head>
  <body>
-      <script src="index.js"></script>
+
+    <script src="getController.js"></script>
      
   <!--creation d'un tableau pour les clients-->
-  <table>
+   <h1> Listes des clients</h1> 
     
-        <h1> Listes des clients</h1>
-        <button id="bc"><a href="http://localhost:3000/form.html">+ clients </a></button>
-        <br><br><br><br>
+  <button class="button1" onclick="window.location.href='form.html';" role="button">Ajouter un client</button>
+
+   <table>
+
+        <div id="container">  </div>
+  
         <tr> <th>id </th> <th> email</th> <th> Prenom</th> <th>Nom</th> <th> Societe</th> <th> Pays</th></tr>
-        <tr> <td> 1</td> <td>isidro_von@hotmail.com</td> <td> Torrey</td> <td> Veum</td> <td> Google</td> <td> Switzerland</td></tr>
-        <tr> <td> 1</td> <td>isidro_von@hotmail.com</td> <td> Torrey</td> <td> Veum</td> <td> Google</td> <td> Switzerland</td></tr>
+        tr>
+        <td data-content="id"></td>
+        <td data-content="last"></td>
+        <td data-content="first"></td>
+        <td data-content="company"></td>
+        <td data-content="country"></td>
+        <td data-content="email"></td>
+        <td data-content="created_at"></td>
+    </tr>
+    <tbody id="customers"></tbody>
+
 
   </table>  
  </body>

@@ -4,17 +4,16 @@
 
 <head>
     <link rel="stylesheet" href="liste.css">
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
  
      <h1>Creation de clients</h1>
+
     <form id= "form" action="/form.html" method="POST">
      <fieldset>
 
-     </fieldset>
-       
             <label for="id">Id :</label>
             <input type="text" id="id" name="user_id">
             <br><br>
@@ -34,15 +33,26 @@
             <label for="societe"> Societe :</label>
             <textarea id="societe" name="user_societe"></textarea>
             <br><br>
+
+            <label for="created">created at</label>
+            <input type="date" name="created" id="created" />
         
             <label for="pays"> Pays:</label>
             <textarea id="pays" name="user_pays"></textarea>
             <br><br>
-    
-            <input type="submit" value="Envoyer">
-            <button id="finish"><a href="http://localhost:3000/liste.html">Fin </a></button>
-           <!-- <a href="javascript:{}" onclick="document.getElementById('form').submit(); return false;">submit</a>-->
+        
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', handleSubmit);
+      </script>
+  
+      <div id="container"></div>
+      <button class="button1" onclick="window.location.href='liste.html';" role="button">Ajouter un client</button>
     </fieldset>
+    </body>
+  </html>
+  
 
     </form>
 
